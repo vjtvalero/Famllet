@@ -13,10 +13,11 @@ const styles = StyleSheet.create({
         borderBottomWidth: 0.5
     },
     tileLeftContainer: { flex: 3 },
+    descriptionText: { color: colors.neutral },
     timeStampText: { color: colors.greyish },
     priceTextContainer: { flex: 1 },
     setAmountColor(amount) {
-        const amountColor = amount > 0 ? colors.green : colors.neutral
+        const amountColor = amount > 0 ? colors.green : (amount < 0 ? colors.red : colors.neutral)
         return {
             textAlign: 'right',
             color: amountColor
@@ -28,7 +29,7 @@ function TransactionTile({ txn }) {
     return (
         <View style={styles.transactionTile}>
             <View style={styles.tileLeftContainer}>
-                <AppText size="14" weight="semibold">{txn.description}</AppText>
+                <AppText size="14" weight="semibold" style={styles.descriptionText}>{txn.description}</AppText>
                 <AppText size="10" style={styles.timeStampText}>{txn.timestamp}</AppText>
             </View>
             <View style={styles.priceTextContainer}>
