@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     },
     logoContainer: { paddingTop: 4, paddingLeft: 14 },
     headerContentContainer: { alignSelf: 'center' },
-    walletName: { color: colors.white, textAlign: 'center' },
+    walletName: { color: colors.white, textAlign: 'center', textTransform: 'uppercase' },
     walletAmount: { color: colors.white },
     logoText: { color: colors.white },
     amountContainer: { paddingBottom: 20 },
@@ -25,9 +25,9 @@ const Header = () => {
                 <AppText style={styles.logoText} weight="bold">Famllet</AppText>
             </View>
             <View style={styles.headerContentContainer}>
-                <AppText style={styles.walletName} size="16">Utilities</AppText>
+                <AppText style={styles.walletName} size="14">Family Business</AppText>
                 <View style={styles.amountContainer}>
-                    <AppText style={styles.walletAmount} size="34">150,000.00</AppText>
+                    <AppText style={styles.walletAmount} size="34" weight="semibold">165,546.79</AppText>
                 </View>
             </View>
         </View >

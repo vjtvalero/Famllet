@@ -26,8 +26,8 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 14,
         color: colors.white,
-        fontFamily: 'Quicksand-Regular',
-        textTransform: 'uppercase'
+        fontFamily: 'Quicksand-SemiBold',
+        textTransform: 'uppercase',
     },
 })
 
