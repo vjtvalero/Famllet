@@ -3,10 +3,11 @@ import { View, StyleSheet, FlatList } from 'react-native'
 import AppText from 'src/components/appText'
 import TransactionTile from 'src/components/transactionTile'
 import colors from 'src/util/colors'
+import MenuButtons from 'src/components/menuButtons'
 
 const styles = StyleSheet.create({
     transactions: {
-        flex: 5,
+        flex: 1,
         backgroundColor: colors.white
     },
     titleContainer: {
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
     transactionListContainer: { paddingHorizontal: 20 },
 })
 
-function Transactions() {
+function Transactions({ navigation }) {
     const [transactions, setTransactions] = useState([
         { id: '1', amount: 100.00, status: 'waiting', type: 'deposit', timestamp: 'just now', description: 'Sultada 10kg' },
         { id: '2', amount: -99.75, status: 'done', type: 'withdraw', timestamp: '2 mins ago', description: 'Enertone' },
@@ -46,6 +47,7 @@ function Transactions() {
                     )}
                 />
             </View>
+            <MenuButtons navigation={navigation} />
         </View>
     )
 }

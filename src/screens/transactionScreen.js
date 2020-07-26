@@ -1,12 +1,7 @@
 import React from 'react'
-import { View, Text, StatusBar } from 'react-native'
-import colors from 'src/util/colors'
-import Header from 'src/components/header'
+import { View, Text } from 'react-native'
 
 const styles = {
-    main: {
-        flex: 1,
-    },
     transactionForm: {
         flex: 6
     }
@@ -14,12 +9,8 @@ const styles = {
 
 function TransactionScreen({ route }) {
     return (
-        <View style={styles.main}>
-            <StatusBar barStyle="light-content" backgroundColor={colors.background} />
-            <Header title={route.params.title} />
-            <View style={styles.transactionForm}>
-                <Text>Transaction screen here</Text>
-            </View>
+        <View style={styles.transactionForm}>
+            <Text>{route.params.title}</Text>
         </View>
     )
 }
