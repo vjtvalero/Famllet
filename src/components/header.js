@@ -18,11 +18,11 @@ const styles = StyleSheet.create({
     amountContainer: { paddingBottom: 20 },
 })
 
-const Header = () => {
+const Header = ({ title }) => {
     return (
         <View style={styles.header}>
             <View style={styles.logoContainer}>
-                <AppText style={styles.logoText} weight="bold">Famllet</AppText>
+                <AppText style={styles.logoText} weight="bold">{title}</AppText>
             </View>
             <View style={styles.headerContentContainer}>
                 <AppText style={styles.walletName} size="14">Family Business</AppText>

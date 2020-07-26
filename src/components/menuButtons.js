@@ -19,18 +19,18 @@ const styles = StyleSheet.create({
     }
 })
 
-function MenuButtons() {
+function MenuButtons({ navigation }) {
     return (
         <View style={styles.buttons}>
             <AppButton
                 title="Deposit"
-                onPress={() => Alert.alert(`Deposit`)}
+                onPress={() => navigation.navigate('Deposit')}
                 buttonStyle={styles.depositButton}
             />
             <View style={{ width: 5 }}></View>
             <AppButton
                 title="Withdraw"
-                onPress={() => Alert.alert(`Withdraw`)}
+                onPress={() => navigation.navigate('Withdraw')}
                 buttonStyle={styles.withdrawButton}
             />
         </View>

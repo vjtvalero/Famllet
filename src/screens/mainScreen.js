@@ -11,13 +11,13 @@ const styles = {
     }
 }
 
-function MainScreen() {
+function MainScreen({ navigation }) {
     return (
         <View style={styles.main}>
             <StatusBar barStyle="light-content" backgroundColor={colors.background} />
-            <Header />
+            <Header title="Famllet" />
             <Transactions />
-            <MenuButtons />
+            <MenuButtons navigation={navigation} />
         </View>
     )
 }
